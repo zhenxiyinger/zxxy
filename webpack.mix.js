@@ -10,9 +10,7 @@ mix.webpackConfig({
     }
   },
   output: {
-    filename: '[name].js',
-    chunkFilename: 'js/[id].[chunkhash].js',
-    publicPath: '/'
+    chunkFilename: 'js/[name].[chunkhash].js',
   },
 });
 
