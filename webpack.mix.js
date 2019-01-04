@@ -1,5 +1,4 @@
-let mix = require('laravel-mix');
-
+const mix = require('laravel-mix');
 const path = require('path');
 
 mix.webpackConfig({
@@ -11,8 +10,15 @@ mix.webpackConfig({
     }
   },
   output: {
-    chunkFilename: 'js/[name].[chunkhash].js',
+    filename: '[name].js',
+    chunkFilename: 'js/[id].[chunkhash].js',
+    publicPath: '/'
   },
 });
 
 mix.js('resources/assets/admin/main.js', 'public/js');
+
+//如果是生产环境，加上版本号
+if (mix.inProduction()) {
+  mix.version();
+}
