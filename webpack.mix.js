@@ -7,7 +7,7 @@ mix.webpackConfig({
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': path.join(__dirname, 'resources', 'assets')
+      '@': path.join(__dirname, 'resources', 'assets', 'admin')
     }
   },
   output: {
@@ -15,4 +15,4 @@ mix.webpackConfig({
   },
 });
 
-mix.js('resources/assets/main.js', 'public/js');
+mix.js('resources/assets/admin/main.js', 'public/js');
