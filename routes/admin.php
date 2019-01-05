@@ -7,5 +7,7 @@ Route::group(['namespace' => 'Admin'], function () {
 
     Route::prefix('public')->group(function () {
         Route::post('login', 'PublicController@login');
+        Route::get('info', 'PublicController@info');
+        Route::post('logout', 'PublicController@logout');
     });
 });
