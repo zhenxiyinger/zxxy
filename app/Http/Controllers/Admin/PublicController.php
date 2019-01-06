@@ -13,21 +13,29 @@ class PublicController extends Controller
         $username = $request->input('username');
         $password = $request->input('password');
         $res = array(
-            'data'=>array('token' => 123),
+            'data' => array(
+                'avatar' => 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+                'introduction' => '我是超级管理员',
+                'name' => 'Super Admin',
+                'roles' => array('admin'),
+                'token' => 'admin',
+            ),
             'code' => 20000,
-            'username' => $username,
-            'password' => $password,
         );
         return $res;
     }
 
     public function info(Request $request)
     {
-        $token = $request->input('token');
         $res = array(
-            'data'=>array('token' => 123,'roles'=>'admin'),
+            'data' => array(
+                'avatar' => 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
+                'introduction' => '我是超级管理员',
+                'name' => 'Super Admin',
+                'roles' => array('admin'),
+                'token' => 'admin',
+            ),
             'code' => 20000,
-            'token' => $token,
         );
         return $res;
     }
@@ -35,7 +43,6 @@ class PublicController extends Controller
     public function logout(Request $request)
     {
         $res = array(
-            'data'=>array('token' => 123),
             'code' => 20000,
         );
         return $res;

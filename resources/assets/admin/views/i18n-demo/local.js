@@ -15,7 +15,6 @@ export default {
       warning: '警告按钮',
       danger: '危险按钮'
     }
-
   },
   en: {
     i18nView: {

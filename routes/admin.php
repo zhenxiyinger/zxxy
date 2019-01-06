@@ -10,4 +10,8 @@ Route::group(['namespace' => 'Admin'], function () {
         Route::get('info', 'PublicController@info');
         Route::post('logout', 'PublicController@logout');
     });
+
+    Route::prefix('auth_admins')->group(function () {
+        Route::get('index', 'AuthAdminsController@index');
+    });
 });
